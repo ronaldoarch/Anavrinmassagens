@@ -111,15 +111,45 @@ section h2 {
   margin-bottom: 12px;
 }
 
-.diferenciais ul {
-  list-style: disc inside;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #2d2d2d;
-  font-size: 1.1rem;
+.diferenciais ul, .diferenciais li {
+  color: #2e8bc0 !important;
 }
-.diferenciais li {
-  margin-bottom: 10px;
+
+/* Animação fade-in para seções */
+section, .card, .btn {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+section {
+  animation-delay: 0.1s;
+}
+.cards-massagens .card:nth-child(1) { animation-delay: 0.2s; }
+.cards-massagens .card:nth-child(2) { animation-delay: 0.3s; }
+.cards-massagens .card:nth-child(3) { animation-delay: 0.4s; }
+.cards-massagens .card:nth-child(4) { animation-delay: 0.5s; }
+.btn { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hover cards e botões sofisticado */
+.card {
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(46,139,192,0.18);
+}
+.btn {
+  transition: background 0.3s, transform 0.2s;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 
 footer {
