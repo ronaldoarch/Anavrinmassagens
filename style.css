@@ -7,14 +7,14 @@
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #181818;
+  background: #0a2342;
   color: #fff;
   line-height: 1.6;
 }
 
 header {
-  background: #232323;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background: #122e5c;
+  box-shadow: 0 2px 8px rgba(10,35,66,0.2);
   padding: 20px 0;
 }
 nav {
@@ -28,7 +28,7 @@ nav {
 .logo {
   font-size: 2rem;
   font-weight: bold;
-  color: #d4af37;
+  color: #2e8bc0;
   letter-spacing: 2px;
 }
 .menu {
@@ -43,17 +43,17 @@ nav {
   transition: color 0.2s;
 }
 .menu a:hover {
-  color: #d4af37;
+  color: #2e8bc0;
 }
 
 .hero {
-  background: linear-gradient(120deg, #232323 60%, #181818 100%);
+  background: linear-gradient(120deg, #122e5c 60%, #0a2342 100%);
   text-align: center;
   padding: 70px 20px 50px 20px;
 }
 .hero h1 {
   font-size: 2.5rem;
-  color: #d4af37;
+  color: #2e8bc0;
   margin-bottom: 20px;
 }
 .hero p {
@@ -61,8 +61,8 @@ nav {
   margin-bottom: 30px;
 }
 .btn {
-  background: #d4af37;
-  color: #181818;
+  background: #2e8bc0;
+  color: #fff;
   padding: 14px 36px;
   border: none;
   border-radius: 30px;
@@ -73,7 +73,7 @@ nav {
   transition: background 0.2s;
 }
 .btn:hover {
-  background: #bfa142;
+  background: #145da0;
 }
 
 section {
@@ -82,7 +82,7 @@ section {
   padding: 0 20px;
 }
 section h2 {
-  color: #d4af37;
+  color: #2e8bc0;
   font-size: 2rem;
   margin-bottom: 30px;
   text-align: center;
@@ -95,9 +95,9 @@ section h2 {
   justify-content: center;
 }
 .card {
-  background: #232323;
+  background: #122e5c;
   border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(212,175,55,0.08);
+  box-shadow: 0 4px 16px rgba(46,139,192,0.08);
   padding: 30px 24px;
   flex: 1 1 300px;
   max-width: 350px;
@@ -107,7 +107,7 @@ section h2 {
   color: #fff;
 }
 .card h3 {
-  color: #d4af37;
+  color: #2e8bc0;
   margin-bottom: 12px;
 }
 
@@ -123,8 +123,8 @@ section h2 {
 }
 
 footer {
-  background: #d4af37;
-  color: #181818;
+  background: #2e8bc0;
+  color: #fff;
   text-align: center;
   padding: 24px 0 12px 0;
   margin-top: 40px;
@@ -137,7 +137,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #232323;
+  background: #122e5c;
   color: #fff;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
   padding: 18px 20px;
@@ -148,8 +148,8 @@ footer {
   z-index: 1000;
 }
 .cookie-banner button {
-  background: #d4af37;
-  color: #181818;
+  background: #2e8bc0;
+  color: #fff;
   border: none;
   border-radius: 20px;
   padding: 8px 24px;
@@ -158,7 +158,7 @@ footer {
   transition: background 0.2s;
 }
 .cookie-banner button:hover {
-  background: #bfa142;
+  background: #145da0;
 }
 
 @media (max-width: 900px) {
