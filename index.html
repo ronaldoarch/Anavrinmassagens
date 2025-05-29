@@ -19,9 +19,13 @@
         </nav>
     </header>
     <section class="hero">
-        <h1>Casa de Massagem em São Paulo</h1>
-        <p>Na Anavrin Massagem, oferecemos o que há de melhor em relaxamento e bem-estar. Somos a casa de massagem em São Paulo ideal para quem busca equilíbrio e tranquilidade em um ambiente sofisticado e acolhedor.</p>
-        <a href="#unidades" class="btn">Escolha a unidade mais próxima</a>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <img src="logo-anavrin.png" alt="Anavrin Massagem" style="height:90px;margin-bottom:20px;">
+            <h1>Casa de Massagem em São Paulo</h1>
+            <p>Na Anavrin Massagem, oferecemos o que há de melhor em relaxamento e bem-estar. Somos a casa de massagem em São Paulo ideal para quem busca equilíbrio e tranquilidade em um ambiente sofisticado e acolhedor.</p>
+            <a href="#unidades" class="btn">Escolha a unidade mais próxima</a>
+        </div>
     </section>
     <section id="unidades" class="unidades">
         <h2>Escolha a Casa de Massagem mais Próxima a você!</h2>
@@ -53,18 +57,22 @@
         <h2>Massagens</h2>
         <div class="cards-massagens">
             <div class="card">
+                <img src="icon-relaxante.png" alt="Relaxante" class="icon-massagem">
                 <h3>Massagem Relaxante</h3>
                 <p>Massagem é a prática de aplicar força ou vibração sobre tecidos macios do corpo, incluindo músculos, tecidos conectivos, tendões, ligamentos e articulações, para estimular a circulação sanguínea, a mobilidade, a elasticidade ou alívio de determinadas dores corporais.</p>
             </div>
             <div class="card">
+                <img src="icon-tailandesa.png" alt="Tailandesa" class="icon-massagem">
                 <h3>Massagem Tailandesa</h3>
                 <p>Thai massagem, massagem tailandesa ou Nuad Phaen Boran é uma terapia curativa tailandesa que utiliza a massagem como forma de equilíbrio corporal, onde o terapeuta usa seus pés, joelhos, polegares, palmas e cotovelos, além de pressão, compressão e alongamento, no corpo do paciente.</p>
             </div>
             <div class="card">
+                <img src="icon-podolatria.png" alt="Podolatria" class="icon-massagem">
                 <h3>Podolatria</h3>
                 <p>Essa massagem é dedicada aos clientes que têm o fetiche por pés. A terapeuta estará à disposição para deixar você acariciar, beijar e cheirar os pés dela.</p>
             </div>
             <div class="card">
+                <img src="icon-fourhands.png" alt="Four Hands" class="icon-massagem">
                 <h3>Four Hands</h3>
                 <p>Massagem realizada à quatro mãos, por uma dupla de terapeutas, que alternam seus movimentos de maneira sincronizada, harmoniosa, profundas e suave. Possibilita aumentar a sensação de bem-estar e relaxamento ao receber a massagem por mais de uma especialista na técnica, através desta conexão energética estabelecida.</p>
             </div>
@@ -79,9 +87,64 @@
             <li>Experiência personalizada para cada cliente</li>
         </ul>
     </section>
+    <section class="galeria">
+        <h2>Nossas Terapeutas & Ambientes</h2>
+        <div class="galeria-fotos">
+            <img src="terapeuta1.jpg" alt="Terapeuta 1">
+            <img src="terapeuta2.jpg" alt="Terapeuta 2">
+            <img src="ambiente1.jpg" alt="Ambiente 1">
+            <img src="ambiente2.jpg" alt="Ambiente 2">
+        </div>
+    </section>
+    <section class="depoimentos">
+        <h2>O que dizem nossos clientes</h2>
+        <div class="depoimentos-carousel">
+            <div class="depoimento ativo">
+                <p>"Experiência maravilhosa, ambiente sofisticado e atendimento impecável!"</p>
+                <span>- Camila S.</span>
+            </div>
+            <div class="depoimento">
+                <p>"As terapeutas são muito profissionais e atenciosas. Recomendo!"</p>
+                <span>- João P.</span>
+            </div>
+            <div class="depoimento">
+                <p>"O melhor spa de São Paulo, sem dúvidas!"</p>
+                <span>- Renata M.</span>
+            </div>
+        </div>
+    </section>
+    <section class="contato-form">
+        <h2>Fale Conosco</h2>
+        <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea placeholder="Sua mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
     <footer id="contato">
+        <div class="footer-info">
+            <div>
+                <h3>Contato</h3>
+                <p>Rua Batataes, 197 / Jardim Paulista - São Paulo</p>
+                <p>Telefone: (11) 3887-4003</p>
+                <p>Email: anavrin.massagem@gmail.com</p>
+            </div>
+            <div>
+                <h3>Localização</h3>
+                <iframe src="https://www.google.com/maps?q=Rua+Batataes,+197,+Jardim+Paulista,+São+Paulo&output=embed" width="220" height="120" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div>
+                <h3>Redes Sociais</h3>
+                <a href="#"><img src="icon-instagram.png" alt="Instagram" style="height:24px;"></a>
+                <a href="#"><img src="icon-facebook.png" alt="Facebook" style="height:24px;"></a>
+            </div>
+        </div>
         <p>&copy; 2024 Anavrin Massagem. Todos os direitos reservados.</p>
     </footer>
+    <a href="https://wa.me/551138874003" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <img src="icon-whatsapp.png" alt="WhatsApp" style="height:48px;">
+    </a>
     <div id="cookie-banner" class="cookie-banner">
         <p>Este website utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="#">Política de Privacidade</a>.</p>
         <button id="accept-cookies">ACEITAR</button>

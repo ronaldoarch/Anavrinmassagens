@@ -46,10 +46,35 @@ nav {
   color: #2e8bc0;
 }
 
+/* Hero com imagem de fundo e overlay */
 .hero {
-  background: linear-gradient(120deg, #122e5c 60%, #0a2342 100%);
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 70px 20px 50px 20px;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  z-index: 1;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(46,139,192,0.65);
+  z-index: 2;
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .hero h1 {
   font-size: 2.5rem;
@@ -152,66 +177,185 @@ section {
   transform: scale(1.05);
 }
 
-footer {
-  background: #2e8bc0;
-  color: #fff;
+/* Galeria de fotos */
+.galeria {
+  max-width: 1100px;
+  margin: 60px auto;
   text-align: center;
-  padding: 24px 0 12px 0;
-  margin-top: 40px;
-  font-size: 1rem;
+}
+.galeria-fotos {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.galeria-fotos img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 12px rgba(46,139,192,0.10);
+}
+.galeria-fotos img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px rgba(46,139,192,0.18);
 }
 
-/* Cookie Banner */
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+/* Carrossel de depoimentos */
+.depoimentos {
   background: #122e5c;
-  color: #fff;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
-  padding: 18px 20px;
+  padding: 50px 0;
+  text-align: center;
+}
+.depoimentos-carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  z-index: 1000;
+  gap: 32px;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
 }
-.cookie-banner button {
-  background: #2e8bc0;
+.depoimento {
+  background: #0a2342;
   color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 24px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
+  border-radius: 12px;
+  padding: 28px 32px;
+  min-width: 220px;
+  max-width: 320px;
+  opacity: 0.5;
+  transition: opacity 0.4s, transform 0.4s;
+  box-shadow: 0 2px 12px rgba(46,139,192,0.10);
 }
-.cookie-banner button:hover {
-  background: #145da0;
+.depoimento.ativo {
+  opacity: 1;
+  transform: scale(1.06);
+  box-shadow: 0 8px 32px rgba(46,139,192,0.18);
+}
+.depoimento span {
+  display: block;
+  margin-top: 12px;
+  color: #2e8bc0;
+  font-weight: bold;
+}
+
+/* Botão WhatsApp flutuante */
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.12);
+}
+
+/* Rodapé moderno */
+footer {
+  background: #122e5c;
+  color: #fff;
+  padding: 40px 0 20px 0;
+}
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto 24px auto;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footer-info div {
+  flex: 1 1 220px;
+}
+footer h3 {
+  color: #2e8bc0;
+  margin-bottom: 10px;
+}
+footer a {
+  color: #2e8bc0;
+  margin-right: 10px;
+}
+footer a:hover {
+  color: #fff;
+}
+
+/* Ícones nos cards de massagem */
+.icon-massagem {
+  height: 38px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Formulário de contato moderno */
+.contato-form {
+  background: #0a2342;
+  padding: 40px 0;
+  text-align: center;
+}
+.contato-form form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contato-form input, .contato-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #122e5c;
+  color: #fff;
+  font-size: 1rem;
+  resize: none;
+  transition: box-shadow 0.2s;
+}
+.contato-form input:focus, .contato-form textarea:focus {
+  box-shadow: 0 0 0 2px #2e8bc0;
+  outline: none;
+}
+.contato-form button {
+  margin-top: 8px;
+}
+
+/* Animação de scroll reveal */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+[data-animate].show {
+  opacity: 1;
+  transform: none;
 }
 
 @media (max-width: 900px) {
-  .cards-unidades, .cards-terapeutas {
+  .footer-info {
     flex-direction: column;
     gap: 18px;
+    align-items: flex-start;
   }
-  nav {
+  .galeria-fotos {
     flex-direction: column;
     gap: 12px;
+    align-items: center;
   }
 }
-
 @media (max-width: 600px) {
-  .hero h1 {
-    font-size: 1.5rem;
+  .hero-content {
+    max-width: 95vw;
   }
-  section h2 {
-    font-size: 1.3rem;
-  }
-  .card {
-    padding: 18px 10px;
-    min-width: 0;
+  .depoimentos-carousel {
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
